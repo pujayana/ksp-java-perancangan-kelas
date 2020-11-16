@@ -49,7 +49,8 @@ public class GuidedSI {
             System.out.println("=== Open Saving ===");
             s.openSavingAccount(bal);
             System.out.println("=== Store Coins ===");
-            s.storeCoins(coin);
+            Coins c = new Coins(coin);
+            s.storeCoins(c);
             System.out.println("=== Withdrawal ===");
             s.withdrawal(amt);
             

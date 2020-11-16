@@ -25,8 +25,8 @@ public class SavingAccount implements SavingInterface {
     }
     
     @Override
-    public void storeCoins(double coin){
-        balance = balance + coin;
+    public void storeCoins(ICurrency coins){
+        balance = balance + coins.getValue();
         displayBalance();
     }
     
@@ -39,6 +39,10 @@ public class SavingAccount implements SavingInterface {
     @Override
     public void displayBalance(){
         System.out.println("Rekening dengan nomor : "+number+" memiliki sisa saldo tabungan : "+balance);
+    }
+
+    void storeCoins(double coin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

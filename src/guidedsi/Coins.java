@@ -9,9 +9,17 @@ package guidedsi;
  *
  * @author pujayana
  */
-public interface SavingInterface {
-    public void openSavingAccount(double bal);
-    public void storeCoins(ICurrency coins);
-    public void withdrawal(double amt);
-    public void displayBalance();
+public class Coins implements ICurrency {
+    
+    public double value;
+    
+    public Coins(double value){
+        this.value = value;
+    }
+    
+    @Override
+    public double getValue(){
+        return value;
+    }
+    
 }
